@@ -1,0 +1,19 @@
+Source: pixz
+Section: utils
+Priority: optional
+Maintainer: David Bremner <bremner@debian.org>
+Build-Depends: debhelper (>= 9), libarchive-dev, liblzma-dev,
+ asciidoc, libxml2-utils, xsltproc, docbook-xml, docbook-xsl
+Standards-Version: 3.9.4
+Homepage: https://github.com/vasi/pixz
+Vcs-Git: git://gitolite.debian.net/pixz.git
+Vcs-Browser: http://gitolite.debian.net/git?p=pixz.git;a=summary
+
+Package: pixz
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: parallel, indexing XZ compressor/decompressor
+ Pixz is a multithreaded compressor/decompressor XZ fully compatible
+ with those provided by xz-utils and busybox. By default it adds
+ indexing information when compressing tar files that allows fast
+ listing and partial-archive extraction.
